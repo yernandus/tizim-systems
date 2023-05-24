@@ -110,7 +110,6 @@ function HomeScreen() {
         isClosable: true,
       }))
       .finally(() => setLoading(false))
-
   }
 
   return (
