@@ -40,7 +40,7 @@ import whatsappIcon from "../assets/whatsapp.png";
 function MobileHomeScreen() {
   const {t} = useTranslation();
   const toast = useToast();
-  const [lang, setLang] = useState('en');
+  const [lang, setLang] = useState('kz');
   const [errors, setErrors] = useState<string[]>([]);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');

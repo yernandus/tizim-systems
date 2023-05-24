@@ -42,7 +42,7 @@ import whatsappIcon from '../assets/whatsapp.png';
 
 function HomeScreen() {
   const {t} = useTranslation();
-  const [lang, setLang] = useState('en');
+  const [lang, setLang] = useState('kz');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
