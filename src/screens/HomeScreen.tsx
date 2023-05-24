@@ -157,6 +157,12 @@ function HomeScreen() {
             mr={10}
             px={8}
             py={6}
+            onClick={() => {
+              const element = document.getElementById("contact");
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
           >
             {t('Contact', {lng: lang})}
           </Button>
@@ -196,7 +202,6 @@ function HomeScreen() {
         </Flex>
       </Flex>
       <Flex
-        bg={'red.300'}
         h={1200}
         backgroundImage={headerImage}
         backgroundSize={'cover'}
@@ -408,7 +413,7 @@ function HomeScreen() {
         </Flex>
       </Box>
       <Flex flexDirection={'column'} py={'600px'} bg={'gray.800'} alignItems={'center'} px={'70px'}>
-        <Heading as={Center} fontSize={42} color={'white'}>
+        <Heading as={Center} fontSize={42} color={'white'} id={'contact'}>
           {t('HOW CAN WE HELP YOU?', {lng: lang})}
         </Heading>
         <Box mb={10} mt={10}>

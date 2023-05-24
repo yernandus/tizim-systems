@@ -36,6 +36,8 @@ import reduxIcon from "../assets/redux.png";
 import figmaIcon from "../assets/figma.png";
 // @ts-ignore
 import whatsappIcon from "../assets/whatsapp.png";
+// @ts-ignore
+import phoneIcon from '../assets/phone.png';
 
 function MobileHomeScreen() {
   const {t} = useTranslation();
@@ -110,6 +112,24 @@ function MobileHomeScreen() {
 
   return (
     <Box>
+      <Box
+        position={'fixed'}
+        bottom={'40px'}
+        right={[4, 8]}
+        bg={'yellow.500'}
+        p={3}
+        borderRadius={'40px'}
+        borderWidth={3}
+        borderColor={'white'}
+        onClick={() => {
+        const element = document.getElementById("contact");
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }}
+      >
+        <Image src={phoneIcon} h={'25px'} />
+      </Box>
       <Flex
         justifyContent={'space-between'}
         alignItems={'center'}
@@ -162,7 +182,6 @@ function MobileHomeScreen() {
         </Flex>
       </Flex>
       <Flex
-        bg={'red.300'}
         h={750}
         backgroundImage={headerImage}
         backgroundSize={'cover'}
@@ -345,7 +364,7 @@ function MobileHomeScreen() {
         </Box>
       </Box>
       <Flex flexDirection={'column'} py={'100px'} bg={'gray.800'} alignItems={'center'} px={3}>
-        <Heading as={Center} fontSize={24} color={'white'}>
+        <Heading textAlign={'center'} fontSize={24} color={'white'} id={'contact'}>
           {t('HOW CAN WE HELP YOU?', {lng: lang})}
         </Heading>
         <Box mb={10} mt={10}>
